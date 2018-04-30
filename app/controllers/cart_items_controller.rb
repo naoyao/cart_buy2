@@ -15,7 +15,8 @@ class CartItemsController < ApplicationController
 
       @cart_item.quantity += params[:quantity].to_i
       @cart_item.save
-      redirect_to current_user
+      
+      redirect_to controller: 'cart_items', action: 'show'
     end
 
     # カート詳細画面から、「更新」を押した時のアクション
