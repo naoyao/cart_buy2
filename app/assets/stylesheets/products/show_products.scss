@@ -1,0 +1,256 @@
+
+.bigimg2{
+  img{
+    display: block;
+    width: auto;
+    height: 560px;
+    margin: auto;
+    border-radius: 2px;
+  }
+}
+.inner2{
+  width: 860px;
+  margin: 0 auto;
+  // float: left;
+}
+//===========================================
+// show_leftcontent.html.haml
+// メンコンテント　// 左カラム
+// ==========================================
+#goodsLeft2 {
+    width: 400px;
+    float: left;
+    z-index: 30;
+}
+
+    #photoCaption {
+      font-size: 10px;
+      line-height: 1.2;
+      text-align: center;
+      height: auto;
+      margin: 13px 10px 8px;
+    }
+
+// 小さいギャラリー
+#photoGallery {
+  #photoThimb {
+    margin: 0 32px 0 32px;
+    li {
+        z-index: 1;
+        vertical-align: top;
+        display: inline-block;
+        _display: inline;
+        zoom: 1;
+        font-size: 10px;
+        text-align: left;
+        width: 41px;
+        margin: 15px 6px 0 0;
+        padding: 0 0 19px 0;
+      span {
+        display: block;
+        line-height: 1.1;
+        margin: 5px 0 0;
+        }
+      .current {
+        z-index: 2;
+        li{
+          float: left;
+        }
+        div {
+          width: 35px;
+          span {
+            display: block;
+            background: #ffffff;
+            font-size: 10px;
+            line-height: 1.2;
+            margin: 0;
+            text-align: center;
+          }
+          img {
+            border: solid 3px #878787;
+            margin: -3px;
+          }
+        }
+      }
+    }
+  }// #photoThimb @end
+}// #photoGallery @end
+#div_0{
+    img{
+      width: 35px;
+      height: 42px;
+      float: left;
+    }
+    p{
+      transform: scale(0.9);
+      // transform-origin: left center;
+    }
+}
+
+// ===========================================
+// show_rightcontent.html.haml
+// メンコンテント　// 右カラム
+// ==========================================
+#goodsRight {
+    float: right;
+    width: 395px;
+    margin: 0;
+    // padding-top: 43px;
+  .innerRight{
+      margin: 0;
+      padding: 0;
+    }
+}
+// /===========================================
+// _products_rightcontent.html.haml /カート関連
+// ==========================================
+.cartBlock .blockMain {
+    border-bottom: 1px solid #dcdcdc;
+    dl {
+      padding: 0 0 0 2px;
+      margin: -1px 0 0;
+      border-top: 1px solid #dcdcdc;
+    }
+    dt {
+      display: table-cell;
+      // float: left;
+      width: 97px;
+      padding: 20px 0 10px 0;
+      vertical-align: middle;
+      // vertical-align: top;
+    }
+    dt {
+      span {
+        display: block;
+        width: 63px;
+      }
+      span.txt {
+        font-size: 10px;
+        line-height: 1.25;
+        margin: 5px 0 0;
+      }
+    }
+    dl dd {
+      vertical-align: middle;
+      display: table-cell;
+      width: 330px;
+      .cartbox .cart {
+        width: 175px;
+        text-align: left;
+        padding: 15px 5px 14px 0;
+        float: none;
+        display: table-cell;
+        }
+      .cart{
+        display: table-cell;
+        // vertical-align: top;
+      }
+      .cartbox {
+        display:table;
+        .stock, p.zozosize {
+          font-size: 10px;
+          color: #808080;
+          text-align: left;
+          // width: 102px;
+          line-height: 1.6;
+          padding-right: 10px;
+          word-wrap: break-word;
+          word-break: keep-all;
+        }
+      }
+      .cartbox{
+        p {
+          color: #2d2d2d;
+          font-size: 12px;
+          text-align: left;
+          width: 73px;
+          padding: 0;
+          margin: 0 0 0 0;
+          }
+        .cart .stpck{
+          p span{
+            float: none;
+            display: table-cell;
+          }
+        }
+
+      .cart{
+        span.btn {
+          border: 1px #555 solid;
+          background: #555;
+          border-radius: 4px;
+        }
+        span.btn{
+            width: 164px;
+            margin: 3px 0 3px;
+            text-align: left;
+            display: inline-block;
+            min-height: 32px;
+            text-align: left;
+            border-radius: 2px;
+          input.reserveBtn {
+              background-position: 36px -130px;
+              color: #ffffff;
+              background: #2d2d2d;
+              background: url('cart_wh.png') no-repeat 32px 10px;
+            }
+          }
+        span input {
+            width: 100%;
+            height: 35px;
+            padding: 3px 0 0px;
+            border: 0;
+            text-indent: 1.8em;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 15px;
+            text-align: center;
+          }
+        }
+      }
+    }// dl dd @end
+    dd{
+      .stock{
+        vertical-align: middle;
+        display: table-cell;
+      }
+      .number{
+        // float: left;
+          position: relative;
+          margin-right: 10px;
+          // width: 30px;
+        .kazu {
+          // float: left;
+          margin-top: 5px;
+          text-align: center;
+          padding: 0 5px;
+          margin-right: 20px;
+          width: 30px;
+          height: 19px;
+          }
+        .button {
+            // float:right;
+            position: absolute;
+            left: 30px;
+            top:-4px;
+            width: 16px;
+            padding-left: 5px;
+            padding-top: 4px;
+            .spinner_up {
+              margin-top: 0px;
+              border: 0px;
+              width: 16px;
+              height: 14px;
+              background: url(https://www.web-f.net/mt_img/ue.jpg) no-repeat;
+            }
+            .spinner_down {
+                margin-top: 0px;
+                border: 0px;
+                width: 16px;
+                height: 14px;
+                background: url(https://www.web-f.net/mt_img/sita.jpg) no-repeat;
+            }
+          }
+        }
+    }// dd @end
+}// カート関連　@end

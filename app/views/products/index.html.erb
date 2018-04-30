@@ -1,0 +1,69 @@
+<!-- # products#index
+  - 商品一覧。
+  - それぞれの商品に「購入数入力欄」と「決定ボタン」とを作る。
+  - ボタンを押すとcarts#add_itemへとPOSTアクションを飛ばし、購入数と商品IDを飛ばしたあと、carts#showへとリダイレクトするようにする。 -->
+
+<div class="wrapper wCommon">
+<div class="inner">
+  <div class="goods inner">
+    <div class="tMainUpArea cf">
+        <!-- <% @products.each do |product| %>
+          <% if product.id == 6 %>
+            <img class="" src=<%= product.image %> alt="">
+          <% end%>
+        <%end %> -->
+        <img src="http://img4.zozo.jp/shop/common/shop_1787/top_1s.jpg" alt="">
+      </div>
+
+    <div class="tMainView inner cf">
+  <!-- 左カラム -->
+      <div class ="tInnerLeft">
+          <div id="photoGallery">
+            <div id="photoMain" class="hasZoom">
+              <% @products.each do |product| %>
+                <% if product.id == 1%>
+                  <img class="" src=<%= product.image %> alt="">
+                <% end%>
+              <%end %>
+            </div>
+          </div>
+        </div>
+  <!-- 右カラム @end-->
+  <!-- 左カラム -->
+      <div class="tInnerRight">
+        <div class="tTextGaralley">
+          <div class="tTextMain">
+            <h2 class="color1">MONO-MART</h2>
+            <p class="tH2child color1">モノマート</p>
+            <p class="tH2childText color1">低価格でトレンド・品質を両立したアイテムを展開。デイリーユースに都会的な最旬をMIX、常に変化する『今』をユーザー視点で表現する感度とコストパフォーマンスを実現した次世代セレクトショップ。</p>
+          </div>
+        </div>
+      </div>
+    <!-- 左カラム end-->
+  </div><!-- goods inner cf -->
+  </div><!-- tMainUpArea" -->
+
+    <!-- -# このアイテムを使ったコーディネート -->
+    <div id="getRecommendRelation" class="otherGoodsBlock pickupBlock loadApiData section wCommon 2">
+      <h3>- collection -</h3>
+        <ul class="pickupList cf">
+          <% @products.each do |product| %>
+            <% if product.id > 1 %>
+              <li class="listInner">
+                <%= link_to "/products/#{product.id}" do %>
+                  <%= image_tag product.image, class:"img2" , alt:"" %>
+                <%end %>
+                  <!-- <img class="img2" src=<%= product.image %> alt=""> -->
+                <p class="label"> <%= product.shopname %>
+                  <p class="price discount">¥<%= product.price %>
+                    <span class="tax">税込</span>
+                    <!-- <span class="off">20%OFF</span> -->
+                  </p>
+                </p>
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
+    </div>
+</div>
+</div>

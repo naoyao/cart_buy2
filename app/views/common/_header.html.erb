@@ -1,0 +1,87 @@
+<div class="commonHead">
+  <div class="headInner inner cf">
+    <nav class="headNav cf">
+      <ul class="headUlL cf">
+        <li class="headLi">
+          <%= image_tag 'fb.png'%>
+        </li>
+        <li class="headLi">
+          <%= image_tag 'twitter.png'%>
+        </li>
+      </ul>
+      <ul class="headUlH1">
+        <h1 class="headh1">
+          <%=link_to "- CartBuy - ", "/" %>
+        </h1>
+      </ul>
+      <ul class="headUlR cf">
+        <% if user_signed_in? %>
+          <%= current_user.name %>様
+          <%= link_to "ログアウト", destroy_user_session_path, class:'headLi',  method: 'delete' %>
+          <%= link_to "ユーザ情報の編集", edit_user_registration_path , class:'headLi'%>
+        <% else %>
+          <%= link_to "新規会員登録", new_user_registration_path , class:'headLi'%>
+          <!-- <li class="headLi">新規会員登録</li> -->
+          <%= link_to "ログイン", new_user_session_path , class:'headLi'%>
+          <!-- <li class="headLi">ログイン</li> -->
+        <% end %>
+        <!-- <li class="headLi"> -->
+          <%=link_to "/cart_items/show.html" , class:'headLi' do %>
+            <%= image_tag 'cart_bk.png'%>
+          <% end %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<!-- コンテンツヘッダー -->
+<div class="hmainHead">
+  <div class="hHeader inner cf">
+    <div class="hItemSearch cf">
+      <div class="blogSideBox bdr cf">
+      <!-- ヘッダー検索 -->
+        <form action="">
+          <p class="hKeyword">
+            <input type="text" class="searchQuery" name= "keyword" placeholder="search" value: ""></input>
+            <p class="hSubmit">
+              <form action="" class="js-search-submit" "accept-charset": "utf-8" action="/" method ="get"></form>
+            </p>
+          </p>
+        </form>
+      </div>
+    </div>
+       <!-- # ヘッダー検索　＠end -->
+   <!-- ヘッダーアイコン -->
+      <nav>
+        <ul class="hCtrlList cf">
+          <li class="hNotic hPopWrap static">
+            <a href="/products">
+              <span>shop</span>
+            </a>
+          </li>
+          <li class="hNotic hPopWrap static">
+            <a href="">
+              <span>category</span>
+            </a>
+          </li>
+          <li class="hNotic hPopWrap static">
+            <a href="">
+              <span>bland</span>
+            </a>
+          </li>
+          <li class="hNotic hPopWrap static">
+            <a href="">
+              <span >woman</span>
+            </a>
+          </li>
+          <li class="hNotic hPopWrap static">
+            <a href="">
+              <span >men</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    <!-- ヘッダーアイコン @end -->
+      </div>
+</div>

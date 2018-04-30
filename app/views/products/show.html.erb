@@ -1,0 +1,25 @@
+<!-- # products#index
+  - 商品一覧。
+  - それぞれの商品に「購入数入力欄」と「決定ボタン」とを作る。
+  - ボタンを押すとcarts#add_itemへとPOSTアクションを飛ばし、購入数と商品IDを飛ばしたあと、carts#showへとリダイレクトするようにする。 -->
+
+<!-- -# メインコンテント -->
+<div class="wrapper wCommon">
+  <div class="inner">
+    <article class="cf">
+      <div class="singleColumn cf inner2">
+        <div id="goodMainArea" class="cf">
+
+      <!-- -# パンくずリスト -->
+        <%= render "common/pankuzu" %>
+
+      <!-- 商品詳細 -->
+      <!-- カート情報 -->
+        <%= render "show_leftcont" %>
+          <%= render "show_rightcont" %>
+
+      </div>
+      </div>
+    </article>
+  </div>
+</div>

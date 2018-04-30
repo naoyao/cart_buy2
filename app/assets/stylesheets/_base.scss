@@ -1,0 +1,85 @@
+// ========================================
+//共通部分　全体
+// ========================================
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Lucida Grande", Verdana, "ＭＳ Ｐゴシック", sans-serif;
+  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Raleway', sans-serif;
+ }
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+input, textarea, select, option, button {
+  font-family: inherit;
+  color: inherit; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom; }
+
+li, nav ul, nav ol {
+  list-style: none;
+  list-style-image: none; }
+
+ul, ol {
+  margin-left: 0;
+  padding: 0; }
+
+a, p {
+  // clear: #444;
+  text-decoration: none; }
+
+a:hover {
+  color: #888; }
+
+p {
+  // margin-bottom: 5px;
+  // line-height: 1.5em;
+ }
+//
+a, p{
+  color: #333;
+  // color: #eee;
+}
+
+// h1, h2, h3, .copyright {
+//   color: #333; }
+
+.inner{
+  // max-width: 90%;
+  width: 980px;
+  margin: 0 auto;
+}
+
+.cf::after {
+  content: '';
+  display: block;
+  clear: both; }
+.taxc{
+  text-align: center;
+}
+.color1{
+  color:#888888;
+}
+
+// ナビゲーションが途中から固定
+.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+}
+.is-fixed2 {
+  position: static;
+}
+
+// 共通
+.wCommon{
+  padding: 30px 27px 30px 27px;
+}
+.commonHead{
+  background: rgba(158, 158, 158,.03);
+}
