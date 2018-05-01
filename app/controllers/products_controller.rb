@@ -12,6 +12,7 @@ class ProductsController < ApplicationController
     # そもそも「一つ」の情報の中にあるidやnameなどのカラムしか取ってこれない。
     # 一つの情報しか取れないので、そもそも　each文　での使用は不可。
     @product = Product.find(params[:id])
+    @cart_item = CartItem.new
   end
 
   # private

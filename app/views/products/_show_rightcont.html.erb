@@ -5,7 +5,7 @@
   <div id="goodsRight">
   <!-- -# カート関連 -->
     <div class="cartBlock clearfix cf">
-      <%= form_for(new_path , method: :post) do %>
+      <%= form_for(@cart_item) do |f| %>
 
       <div class="blockMain">
         <% @products.each do |product| %>

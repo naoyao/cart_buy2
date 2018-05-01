@@ -3,12 +3,12 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'homes#index'
 
-  resources :products
   resources :homes, only: [:index]
-  resources :cart_items, only: [:show]
+  resources :products
+  resources :cart_items, only: [:show, :new, :create, :update, :delete]
   resources :user
 
-  post '/new' => 'cart_items#new'
-  post '/update' => 'cart_items#update'
-  delete '/delete' => 'cart_items#delete'
+  # post '/new' => 'cart_items#new'
+  # post '/update' => 'cart_items#update'
+  # delete '/delete' => 'cart_items#delete'
 end
