@@ -17,3 +17,9 @@
 /yarn-error.log
 
 .byebug_history
+
+# Ignore Byebug command history file.
+
+/public/uploads/
+
+config/secrets.yml

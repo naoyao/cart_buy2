@@ -13,16 +13,20 @@ class CartItemsController < ApplicationController
     end
 
     def create
-      @cart_item = CartItem.new
+      # binding.pry
+      @cart_item = CartItem.new(cart_item_params)
+      # binding.pry
       # @cart_item = CartItem.find(cart_item_params)
 
-      if @cart_item.blank?
-        @cart_item = current_user.cart_items.build(product_id: params[:product_id])
-      end
+      # if @cart_item.blank?
+      #   @cart_item = current_user.cart_items.build(product_id: params[:product_id])
+      # end
 
       # binding.pry
-      # @cart_item.quantity += params[:quantity].to_i
-      @cart_item.save(cart_item_params)
+      # @cart_item.quantity = params[:quantity].to_i
+      # binding.pry
+      # @cart_item.save(cart_item_params)
+      @cart_item.save
 
       redirect_to controller: 'cart_items', action: 'new'
     end
@@ -44,7 +48,9 @@ class CartItemsController < ApplicationController
     end
 
     def cart_item_params
-      params.require(:cart_item).permit(:user_id, :product_id, :quantity)
+      params.permit(:quantity, :product_id).merge(user_id: current_user.id)
+      # params.permit(:quantity).merge(user_id: current_user.id, product_id: params[:product_id])
+      # params.permit(:cart_item).merge(quantity: params[:quantity].to_i, user_id: current_user.id, product_id: params[:product_id])
     end
 
 end
