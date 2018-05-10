@@ -5,61 +5,10 @@
   <div id="goodsRight">
   <!-- -# カート関連 -->
     <div class="cartBlock clearfix cf">
-      <%= form_for(@cart_item) do |f| %>
 
-      <div class="blockMain">
-        <% @products.each do |product| %>
-          <% if product.id  < 4 %>
-            <dl class="cf">
-              <dt>
-                <span class="img">
-                  <%= image_tag product.image %>
-                </span
-                <span class="txt">
-                  <%= product.name %>
-                </span>
-              </dt>
-              <dd>
-                <ul>
-                  <li id="cart_did_52979605" class="cf">
-                    <div class="cartbox">
-                      <div class="stock">
-                        <p>
-                          <span>M / 予約可能 </span>
-                        </p>
-                        <p class="zozosize ico_sex ico_women">
-                          <span class="sizeZ">
-                            <span>M サイズ相当</span>
-                          </span>
-                        </p>
-                      </div>
-                  <!-- 「購入数入力欄」 -->
-                      <div class="number cf">
-                        <input class="kazu" id="kazu<%= product.id%>" type="text" name="quantity" value="1" tabindex="1" onclick="javascript:spinner('kazu',<%= product.id%>);">
-                      <!-- product＿idの値(value)を送る -->
-                        <input class="kazu" id="product<%= product.id%>" type="hidden" name="product_id" value= "<%=product.id %>" tabindex="1" onclick="javascript:spinner('kazu',<%= product.id%>);">
-
-
-                        <div class="button cf">
-                          <input type="button" id="up<%= product.id%>" name="spinner_up" class="spinner_up" value="" onclick="javascript:spinner('up',<%= product.id%>);">
-                          <input type="button" id="down<%= product.id%>" name="spinner_up" class="spinner_down" value="" onclick="javascript:spinner('down',<%= product.id%>);">
-                        </div>
-                      </div>
-                    <!-- 「決定ボタン」 -->
-                      <div class="cart">
-                        <span class="btn">
-                          <input name="p_seckey" type="submit" value="カートに入れる" class="btn reserveBtn">
-                        </span>
-                      </div>
-                      <% end %>
-                    </div>
-                  </li>
-                </ul>
-              </dd>
-          </dl>
-        <% end %>
-      <% end %>
-      </div>
-      <!-- -# カート関連 @end -->
+      <%= render "products/form" %>
+      
+    </div>
+  <!-- -# カート関連 @end -->
     </div>
   </div>

@@ -9,6 +9,7 @@ class CartItemsController < ApplicationController
     # 商品一覧画面から、「商品購入」を押した時のアクション
     def new
       @cart_item = CartItem.new
+      @cart_items = current_user.cart_items
       # binding.pry
     end
 
