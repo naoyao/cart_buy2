@@ -13,6 +13,7 @@ class ProductsController < ApplicationController
     # 一つの情報しか取れないので、そもそも　each文　での使用は不可。
     @product = Product.find(params[:id])
     @cart_item = CartItem.new
+    
   end
 
   # private

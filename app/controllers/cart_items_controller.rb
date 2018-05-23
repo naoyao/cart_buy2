@@ -10,7 +10,12 @@ class CartItemsController < ApplicationController
     def new
       @cart_item = CartItem.new
       @cart_items = current_user.cart_items
-      # binding.pry
+
+    # 商品合計-----------------------------
+    @products = Product.all
+    @total_price = @products.sum(:price)
+      # @cart_items.inject{ |sum, cart_item| sum + cart_item.product.price.to_i}
+    # 商品合計 @end-----------------------------
     end
 
     def create

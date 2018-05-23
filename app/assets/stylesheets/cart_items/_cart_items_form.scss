@@ -1,12 +1,28 @@
 // /===========================================
 //カート関連
 // ==========================================
-.blockMain {
-    border-bottom: 1px solid #dcdcdc;
+.blockMain2 {
+    // border-top: 1px solid #dcdcdc;
+    // border-bottom: 1px solid #dcdcdc;
+  &Cartitem{
+    width: 500px;
+    // padding-left: 20px;
+    // background: rgba(158, 158, 158, 0.03);
+
+  .cart_itemH2{
+    font-size: 20px;
+    margin-bottom: 30px;
+    &Child{
+      color:red;
+      margin-bottom: 20px;
+    }
+  }
+
     dl {
       padding: 0 0 0 2px;
       margin: -1px 0 0;
       border-top: 1px solid #dcdcdc;
+      border-bottom: 1px solid #dcdcdc;
     }
     dt {
       display: table-cell;
@@ -32,9 +48,9 @@
       display: table-cell;
       width: 330px;
       .cartbox .cart {
-        width: 175px;
+        width: 135px;
         text-align: left;
-        padding: 15px 5px 14px 0;
+        padding: 15px 28px 14px 0;
         float: none;
         display: table-cell;
         }
@@ -78,8 +94,9 @@
           border-radius: 4px;
         }
         span.btn{
-            width: 164px;
+            width: 118px;
             margin: 3px 0 3px;
+            padding-right: 10px;
             text-align: left;
             display: inline-block;
             min-height: 32px;
@@ -89,7 +106,7 @@
               background-position: 36px -130px;
               color: #ffffff;
               background: #2d2d2d;
-              background: url('cart_wh.png') no-repeat 20px 10px;
+              background: url('cart_wh.png') no-repeat 16px 10px;
             }
           }
         span input {
@@ -105,7 +122,22 @@
           }
         }
       }
+      .cart_itemCart{
+        width: 120px;
+        li.delete,.cart_itemPrice{
+          float: left;
+          // margin-right: 20px;
+        }
+        .delete>a{
+          color: #808080;
+          border-bottom: 1px solid #808080;
+          margin-left: 35px;
+        }
+        .cart_itemPrice{
+        }
+      }
     }// dl dd @end
+
     dd{
       .stock{
         vertical-align: middle;
@@ -124,6 +156,7 @@
           margin-right: 20px;
           width: 30px;
           height: 19px;
+          border: 1px solid  #dcdcdc;
           }
         .button {
             // float:right;
@@ -138,16 +171,22 @@
               border: 0px;
               width: 16px;
               height: 14px;
-              background: url(https://www.web-f.net/mt_img/ue.jpg) no-repeat;
+              background: url('up_arrow.png') no-repeat;
             }
             .spinner_down {
                 margin-top: 0px;
                 border: 0px;
                 width: 16px;
                 height: 14px;
-                background: url(https://www.web-f.net/mt_img/sita.jpg) no-repeat;
+                background:url('down_arrow') no-repeat;
+                // background: url(https://www.web-f.net/mt_img/sita.jpg) no-repeat;
             }
           }
         }
     }// dd @end
+    .totalSum{
+      text-align:right;
+      margin: 20px 70px 0 0;
+    }
+  }
 }// カート関連　@end

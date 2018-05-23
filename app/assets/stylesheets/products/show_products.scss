@@ -238,14 +238,18 @@
               border: 0px;
               width: 16px;
               height: 14px;
-              background: url(https://www.web-f.net/mt_img/ue.jpg) no-repeat;
+              background: url('up_arrow.png') no-repeat;
+              // border: 1px solid  #dcdcdc;
+              // background: url(https://www.web-f.net/mt_img/ue.jpg) no-repeat;
+
             }
             .spinner_down {
                 margin-top: 0px;
                 border: 0px;
                 width: 16px;
                 height: 14px;
-                background: url(https://www.web-f.net/mt_img/sita.jpg) no-repeat;
+                background:url('down_arrow') no-repeat;
+                // background: url(https://www.web-f.net/mt_img/sita.jpg) no-repeat;
             }
           }
         }
